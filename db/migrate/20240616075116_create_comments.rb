@@ -4,7 +4,7 @@ class CreateComments < ActiveRecord::Migration[6.0]
       t.belongs_to :article, null: false, foreign_key: true
       t.string :comment
 
-      t.datetime :created_at
+      t.datetime:created_at
     end
   end
 end
