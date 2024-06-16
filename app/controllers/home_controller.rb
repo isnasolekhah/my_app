@@ -10,7 +10,7 @@ class HomeController < ApplicationController
   def save_comment
     @article = Article.where(id:params[:article_id]).first
     comment=@article.comments.new
-    comment.comment=params(:comment)
+    comment.comment=params[:comment]
     if comment.save
       redirect_to read_path(article_id: @article.id,notice:'Succes')
     else
